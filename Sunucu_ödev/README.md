@@ -1,19 +1,24 @@
 # Car Rental API
 
+## 📝 Proje Tanımı ve Senaryo
+Bu proje, bir araç kiralama şirketinin dijital yönetim süreçlerini simüle etmek amacıyla geliştirilmiştir. Sistem; araç envanterinin yönetilmesi (CRUD) ve kiralama işlemlerinin belirli iş kuralları çerçevesinde yürütülmesini sağlar.
+
+**Senaryo:** Şirketimiz, envanterindeki araçları sadece müsaitlik durumuna göre kiralamakta ve eski model araçlar için özel bir fiyatlandırma politikası gütmektedir. Bu API, hem şirket personeli hem de müşteri uygulamaları için veri altyapısını sağlar.
+
 Profesyonel Araç Kiralama Sistemi için geliştirilmiş RESTful API. Node.js ve Express ile MVC mimarisi kullanılarak hazırlanmıştır.
 
-## Kurulum (Installation)
+## 🛠 Kurulum
+1. `npm install` komutu ile bağımlılıkları yükleyin.
+2. `.env.example` dosyasını `.env` yapın.
+3. `npm start` veya `node server.js` ile başlatın.
 
-1. Projeyi indirin.
-2. Bağımlılıkları yükleyin:
-    ```bash
-    npm install
-    ```
-3. Uygulamayı başlatın:
-    ```bash
-    npm start
-    ```
-    Sunucu `http://localhost:3000` adresinde çalışacaktır.
+## 📌 API Uç Noktaları
+- **GET /api/cars**: Tüm araçları listeler.
+- **POST /api/rent/:id**: Aracı kiralar (Müsaitlik ve model yılı kontrolü yapar).
+
+## 🧠 İş Kuralları
+1. `isAvailable: false` olan araç kiralanamaz.
+2. 2020 yılından eski araçlar sistem üzerinden kiralamaya kapatılmıştır.
 
 ## API Endpoint Listesi
 
@@ -25,7 +30,7 @@ Profesyonel Araç Kiralama Sistemi için geliştirilmiş RESTful API. Node.js ve
 | `DELETE` | `/api/cars/:id` | Aracı siler |
 | `POST` | `/api/cars/:id/rent` | Aracı kiralar (isAvailable -> false) |
 
-## İş Kuralları (Business Logic)
+## İş Kuralları 
 
 1. **Kiralama Kısıtlaması**: `rentCar` fonksiyonunda, eğer araç müsait değilse (`isAvailable: false`), kiralama işlemi reddedilir ve `400 Bad Request` döner.
 2. **Fiyat Kısıtlaması**: `updateCar` fonksiyonunda, 2020 modelden eski araçların günlük fiyatı 2000 TL üzerine çıkarılamaz.
