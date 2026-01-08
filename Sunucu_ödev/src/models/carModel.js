@@ -1,4 +1,3 @@
-// Fake Database (In-Memory)
 let cars = [
     {
         id: 1,
@@ -21,9 +20,10 @@ let cars = [
         brand: "BMW",
         model: "520i",
         year: 2023,
-        isAvailable: false, // Currently rented
+        isAvailable: false, 
         dailyPrice: 5000
     }
 ];
 
 module.exports = cars;
+
