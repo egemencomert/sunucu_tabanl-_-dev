@@ -63,10 +63,6 @@ Bu proje in-memory veri kullanmaktadır ancak gerçek bir senaryoda ilişkisel v
 
 *İlişki Türü:* Bir araç birçok kez kiralanabilir (One-to-Many), bir müşteri birçok araç kiralayabilir (One-to-Many). Rentals tablosu bu ilişkiyi sağlar.
 
-## 📊 ER Diyagramı
-Projenin veritabanı tasarımına ve tablolar arası ilişkilere aşağıdaki görselden ulaşabilirsiniz:
-
-![ER Diyagramı](./ER_Diyagrami.png)
 
 
 
