@@ -66,5 +66,6 @@ Bu proje in-memory veri kullanmaktadır ancak gerçek bir senaryoda ilişkisel v
 ## 📊 ER Diyagramı
 Projenin veritabanı tasarımına ve tablolar arası ilişkilere aşağıdaki görselden ulaşabilirsiniz:
 
-![ER Diyagramı](./ER_Diyagram.png)
+![ER Diyagramı](./ER_Diyagrami.png)
+
 
