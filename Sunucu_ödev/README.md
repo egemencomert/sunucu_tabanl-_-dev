@@ -69,3 +69,4 @@ Projenin veritabanı tasarımına ve tablolar arası ilişkilere aşağıdaki g�
 ![ER Diyagramı](./ER_Diyagrami.png)
 
 
+
